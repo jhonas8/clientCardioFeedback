@@ -1,0 +1,64 @@
+.cardGrid {
+  position: relative;
+  z-index: 0;
+  top: 2rem;
+  width: 100%;
+  height: calc(100vh - 2rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.buttonAdminContainer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.4rem;
+  opacity: 0.4;
+  transition: opacity 0.4s ease-in, background-color 0.2s ease-in-out;
+}
+.buttonAdminContainer p {
+  color: #000;
+}
+.buttonAdminContainer:hover {
+  opacity: 1;
+  transition: all 0.4s ease-out;
+  background-color: rgba(80, 197, 186, 0.25);
+}
+.buttonAdminContainer:hover #adminButton {
+  width: 2.8rem;
+  height: 2.8rem;
+  transition: all 0.2s ease-in-out;
+  border-color: rgba(0, 0, 0, 0.8);
+}
+.buttonAdminContainer:hover #adminButton svg {
+  width: 1.3rem;
+  height: 1.3rem;
+  transition: all 0.2s ease-in-out;
+}
+
+svg {
+  transition: all 0.2s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+}
+
+#adminButton {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/*# sourceMappingURL=styles.css.map */

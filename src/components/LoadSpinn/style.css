@@ -1,0 +1,41 @@
+.spinnCenterContainer {
+    position: absolute;
+    z-index: 1;
+
+    top: 0;
+    left: 0;
+
+    margin: 0;
+    padding: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loadSpinn {
+    position: relative;
+    z-index: 1;
+
+    width: 2rem;
+    height: 2rem;
+
+    border: .25rem solid rgba(0, 0, 0, .1);
+    border-radius: 50%;
+    border-left-color: var(--primary-color);
+
+    animation: spinn .5s linear infinite;
+}
+
+.loadSpinn::before {
+    content: '';
+}
+
+@keyframes spinn {
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap");
+.logoutButton {
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  z-index: 2;
+  background-color: transparent;
+  border: none;
+  color: #818080;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+.logoutButton:hover {
+  color: #313131;
+  transition: all 0.2s ease-in-out;
+}
+
+/*# sourceMappingURL=styles.css.map */

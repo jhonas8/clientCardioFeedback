@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap");
+@keyframes feedback-button-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateY(10%);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.FeedbackButton {
+  padding: 0.3rem;
+  width: auto;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #41cca5;
+  color: #ffff;
+  filter: drop-shadow(0 0 0.75rem #41cca557);
+  border: 1px solid transparent;
+  border-radius: 14%;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease-in;
+  opacity: 0;
+  animation: feedback-button-animation 1s ease-in forwards 1.3s;
+}
+.FeedbackButton:hover {
+  background-color: #3dbe9a;
+  transition: all 0.3s ease-out;
+}
+
+/*# sourceMappingURL=styles.css.map */

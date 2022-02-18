@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+
+.notFoundTitle {
+    width: 100vw;
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.notFoundMessage {
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+}
+
+.notFoundMessage > a {
+    text-decoration: none;
+}

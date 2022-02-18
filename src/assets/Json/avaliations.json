@@ -1,0 +1,14 @@
+{
+    "avaliationMeanings": {
+        "142": "great",
+        "183": "good",
+        "182": "regular",
+        "143": "bad"
+    },
+    "avaliationPossibilities": [
+        "142",
+        "183",
+        "182",
+        "143"
+    ]
+}

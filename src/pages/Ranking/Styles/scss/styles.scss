@@ -1,0 +1,66 @@
+.rankingPageMain {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.rankingPageTitle {
+    position: relative;
+
+    font-size: 2rem;
+
+    font-family: 'Hind Siliguri', sans-serif;
+    color: var(--primary-color);
+
+    img {
+        width: 4rem;
+        height: auto;
+        position: relative;
+        top: 45px;
+        left: -14px;
+        z-index: 0;
+    }
+
+    h1 {
+        position: relative;
+        z-index: 1;
+        background-color: #ffff;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.rankingTable {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .rankingTableCard {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        border: 1px solid rgba(0,0,0,0.4);
+
+        color: rgba(0,0,0,0.6);
+
+        &:hover {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        cursor: pointer;
+
+        div {
+            padding: 1rem;
+
+            font-family: 'Poppins', sans-serif;
+        }
+    }
+}

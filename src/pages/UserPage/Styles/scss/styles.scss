@@ -1,0 +1,141 @@
+.userPage {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.cardUserProfile {
+    width: 100vw;
+    height: 40vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 1rem;
+
+    background-color: var(--primary-color);
+    border: 1px solid rgba($color: #3ab390, $alpha: 1);
+
+    .userImage {
+
+        img {
+            height: calc(0.8 * 40vh);
+            width: auto;
+
+            border-radius: 50%;
+            
+            filter: brightness(1) contrast(3); //Making it white (it's grey by default)
+        }
+    }
+
+    .userProfileDesc {
+        color: #fff;
+
+        width: 100%;
+
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+
+        .userNameProfile {
+            font-weight: bolder;
+            font-size: 2rem;
+            text-transform: capitalize;
+        }
+
+        .userSegmentProfile {
+            font-weight: 300;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.usersPageChart {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.scoresContainer {
+    $scoreCardWidth: 10rem;
+
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gridCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    gap: 1rem;
+
+    h3 {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #scorePointsP {
+        width: 3.8rem;
+        height: 3.8rem;
+
+        padding: 1rem;
+
+        border: 1px solid rgba(0,0,0, .4);
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div {
+        text-transform: capitalize;
+    }
+
+
+    &:hover {
+        .suggestedPointsCard {
+            display: block;
+
+        }
+    }
+}
+
+.suggestedPointsCard {
+
+    position: absolute;
+
+    font-family: 'Poppins', sans-serif;
+
+    text-align: center;
+    
+    background-color: rgba(231, 235, 235, 0.87);
+    padding: .8rem;
+    
+    border-radius: 5rem;
+
+    left: calc(50vw + 2.5rem);
+
+    display: none;
+
+    animation: suggestedFade .3s forwards ease-in;
+
+}
+
+@keyframes suggestedFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,70 @@
+@keyframes fade-intro-cardio {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-20%);
+    opacity: 0.3;
+  }
+  90% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-intro-imagem {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(20%);
+    opacity: 0.3;
+  }
+  90% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@font-face {
+  font-family: "BuloRounded-Bold";
+  src: url("../../../../assets/Fonts/BuloRounded-Bold.ttf") format("truetype");
+}
+.Logo {
+  display: grid;
+  grid-template-columns: 1.4rem 1fr;
+  grid-template-rows: 3.5rem 1fr;
+  grid-template-areas: "cardio cardio" "gap imagem";
+  font-family: "BuloRounded-Bold", bold, sans-serif;
+  font-size: 4rem;
+}
+.Logo .Cardio {
+  grid-area: cardio;
+  color: #808080;
+  filter: drop-shadow(0 0 0.75rem #7e7d7d50);
+  opacity: 0;
+  animation: fade-intro-cardio 1.6s ease-in forwards;
+}
+.Logo .Imagem {
+  grid-area: imagem;
+  color: #3ABA97;
+  filter: drop-shadow(0 0 0.75rem #36ac8c54);
+  opacity: 0;
+  animation: fade-intro-imagem 1.3s ease-in forwards 0.3s;
+}
+.Logo .gap {
+  grid-area: gap;
+}
+.Logo::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

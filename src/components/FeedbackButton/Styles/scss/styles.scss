@@ -1,0 +1,33 @@
+@use './animation.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+
+
+.FeedbackButton {
+    padding: .3rem;
+    width: auto;
+    height: 2.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: #41cca5;
+    color: #ffff;
+    filter: drop-shadow(0 0 0.75rem #41cca557); 
+    
+    border: 1px solid transparent;
+    border-radius: 14%;
+    
+    font-family: 'Poppins', sans-serif;
+    
+    transition: all .3s ease-in;
+
+    &:hover {
+        background-color: #3dbe9a;
+        transition: all .3s ease-out;
+    }
+
+    opacity: 0;
+    @include animation.feedbackButtonAnimation;
+}

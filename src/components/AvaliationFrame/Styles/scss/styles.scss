@@ -1,0 +1,53 @@
+@use './animation.scss';
+
+:root {
+    --squareArest: 20rem; 
+}
+
+.frameContainer {
+    //Variables
+    $squareArest: var(--squareArest);
+    $frameColor: #ffff;
+    $border-to-center-distance: $squareArest/2;
+
+    width: $squareArest;
+    height: $squareArest;
+
+    position: absolute;
+    top: calc(50vh - $border-to-center-distance);
+    left: calc(50vw - $border-to-center-distance);
+    z-index: 1;
+
+    background-color: $frameColor;
+
+    opacity: 0;
+    display: none;
+
+    border-radius: 15%;
+
+    @include animation.fadeIntroAnimation;
+}
+
+.visibleFrameContainer {
+    opacity: 1;
+    
+    display: block;
+}
+
+.innerPart {
+    opacity: 0;
+    @include animation.innerPartAnimation;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+}
+
+.avaliationFrameTitle{
+    color: var(--primary-color); 
+}

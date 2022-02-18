@@ -1,0 +1,51 @@
+@keyframes fade-intro-cardio {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(-20%);
+        opacity: .3;
+    }
+
+    90% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-intro-imagem {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(20%);
+        opacity: .3;
+    }
+
+    90% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@mixin cardioAnimation {
+    animation: fade-intro-cardio 1.6s ease-in forwards;
+}
+
+@mixin imagemAnimation {
+    animation: fade-intro-imagem 1.3s ease-in forwards .3s;
+}
+
+

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+
+@mixin transparentBorder {
+    border: 1px solid transparent;
+}
+
+:root {
+    --login-card-color: #f1eeee;
+}
+
+.LoginPage {
+    height: 100vh;
+    width: 100vw;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.loginForm {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 1.2rem; 
+
+   background-color: var(--login-card-color);
+
+   width: 40vw;
+   height: 40vw;
+   min-width: 305px;
+   min-height: 305px;
+   padding: 1rem;
+
+   @include transparentBorder();
+   border-radius: 15%;
+
+   h3 {
+       color: rgb(88, 87, 87);
+       font-family: 'Rowdies', cursive;
+       letter-spacing: .12rem;
+       font-size: 2rem;
+   }
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    gap: .3rem;
+    
+    width: 100%;
+
+    color: #000;
+
+    #email, #password {
+        height: 1.5rem;
+        width: 100%;
+
+        @include transparentBorder();
+    }
+}
+
+.actions {
+    
+    .loginButton {
+        padding: .3rem;
+
+        border: 1px solid #9c9c9c;
+        border-radius: 15%;
+
+        background-color: var(--login-card-color);
+        color: #4d4c4c;
+
+        font-size: 1em;
+        font-weight: bold;
+
+        transition: all ease-out .2s;
+
+        &:hover{
+            transition: all ease-in .2s;
+            background-color: #d3d1d1;
+            @include transparentBorder();
+        }
+    }
+}
+
+.register {
+    text-decoration: none;
+    color: #818080;
+    transition: all .2s ease-in;
+
+    &:hover {
+        color: #4d4c4c;
+        transition: all .2s ease-in-out;
+    }
+
+    margin: -.8rem;
+}
+

@@ -1,0 +1,78 @@
+.cardGrid {
+    position: relative;
+    z-index: 0;
+    top: 2rem;
+
+    width: 100%;
+    height: calc(100vh - 2rem);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.buttonAdminContainer {
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .4rem;
+
+    opacity: .4;
+    transition: opacity .4s ease-in, background-color .2s ease-in-out;
+
+    p {
+        color: #000
+    }
+
+    &:hover {
+        opacity: 1;
+        transition: all .4s ease-out;
+
+        #adminButton {
+            width: 2.8rem;
+            height: 2.8rem;
+
+            transition: all .2s ease-in-out;
+
+            svg {
+                width: 1.3rem;
+                height: 1.3rem;
+                transition: all .2s ease-in-out;
+            }
+            
+            border-color: rgba(0,0,0, .8);
+        }
+
+        background-color: rgba(80, 197, 186, 0.25);
+
+    }
+}
+
+svg {
+    transition: all .2s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+}
+
+#adminButton {
+    $radius: 2.5rem;
+
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0, .4);
+    width: $radius;
+    height: $radius;
+    padding: .5rem;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}

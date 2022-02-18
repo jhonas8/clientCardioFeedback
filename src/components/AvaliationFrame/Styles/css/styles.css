@@ -1,0 +1,62 @@
+@keyframes fade-in-animation {
+  0% {
+    width: 0;
+    height: 0;
+    top: 50vh;
+    left: 50vw;
+  }
+  100% {
+    width: var(--squareArest);
+    height: var(--squareArest);
+    top: calc(50vh - var(--squareArest) / 2);
+    left: calc(50vw - var(--squareArest) / 2);
+  }
+}
+@keyframes inner-part-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+:root {
+  --squareArest: 20rem;
+}
+
+.frameContainer {
+  width: var(--squareArest);
+  height: var(--squareArest);
+  position: absolute;
+  top: calc(50vh - var(--squareArest)/2);
+  left: calc(50vw - var(--squareArest)/2);
+  z-index: 1;
+  background-color: #ffff;
+  opacity: 0;
+  display: none;
+  border-radius: 15%;
+  animation: fade-in-animation 0.5s ease-in-out forwards;
+}
+
+.visibleFrameContainer {
+  opacity: 1;
+  display: block;
+}
+
+.innerPart {
+  opacity: 0;
+  animation: inner-part-animation 0.5s ease-in-out forwards 0.5s;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.avaliationFrameTitle {
+  color: var(--primary-color);
+}
+
+/*# sourceMappingURL=styles.css.map */

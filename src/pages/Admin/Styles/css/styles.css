@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&display=swap");
+.adminPage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.adminPageTitle {
+  position: absolute;
+  z-index: 1;
+  top: 1rem;
+  width: 100%;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: center;
+  font-size: 2.3rem;
+  font-family: "Hind Siliguri", sans-serif;
+  background-color: #f3f3f3;
+  color: var(--primary-color);
+}
+
+/*# sourceMappingURL=styles.css.map */

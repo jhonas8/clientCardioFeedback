@@ -1,0 +1,7 @@
+:root {
+    --login-background-color: #4aecbe;
+}
+
+.LoginPage {
+    background-color: var(--login-background-color);
+}

@@ -1,0 +1,36 @@
+.tableTitle {
+  color: var(--primary-color);
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.historyTable {
+  border-collapse: collapse;
+  border: 1px solid var(--primary-color);
+  width: calc(100% - 20px);
+  margin: 20px auto;
+}
+
+.historyTable th,
+.historyTable td {
+  padding: 10px 5px;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+thead > tr:last-child {
+  text-align: left;
+}
+
+thead > tr:first-child {
+  background: var(--primary-color);
+}
+
+tbody > tr:nth-child(2n-1) {
+  background: #f1f1f1;
+}
+
+tfoot > tr {
+  text-align: center;
+  background: var(--primary-color);
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap");
+:root {
+  --login-card-color: #f1eeee;
+}
+
+.LoginPage {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  background-color: var(--login-card-color);
+  width: 40vw;
+  height: 40vw;
+  min-width: 305px;
+  min-height: 305px;
+  padding: 1rem;
+  border: 1px solid transparent;
+  border-radius: 15%;
+}
+.loginForm h3 {
+  color: #585757;
+  font-family: "Rowdies", cursive;
+  letter-spacing: 0.12rem;
+  font-size: 2rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.3rem;
+  width: 100%;
+  color: #000;
+}
+.field #email, .field #password {
+  height: 1.5rem;
+  width: 100%;
+  border: 1px solid transparent;
+}
+
+.actions .loginButton {
+  padding: 0.3rem;
+  border: 1px solid #9c9c9c;
+  border-radius: 15%;
+  background-color: var(--login-card-color);
+  color: #4d4c4c;
+  font-size: 1em;
+  font-weight: bold;
+  transition: all ease-out 0.2s;
+}
+.actions .loginButton:hover {
+  transition: all ease-in 0.2s;
+  background-color: #d3d1d1;
+  border: 1px solid transparent;
+}
+
+.register {
+  text-decoration: none;
+  color: #818080;
+  transition: all 0.2s ease-in;
+  margin: -0.8rem;
+}
+.register:hover {
+  color: #4d4c4c;
+  transition: all 0.2s ease-in-out;
+}
+
+/*# sourceMappingURL=styles.css.map */
