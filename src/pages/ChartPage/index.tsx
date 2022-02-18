@@ -20,13 +20,7 @@ export default function ChartPage() {
         (async()=>{
             const { data } = await api.get('/admin/charts') as {data: avaragesType}
 
-            setAvarages(data ? data : {
-                companyScore:0,
-                suggestedScore: 0,
-                userAndHistory: [],
-                currentAvarages: [{name: 'null', value:0}],
-                previousAvarages: []
-            })
+            setAvarages(data)
         })()
     })
 
@@ -92,7 +86,7 @@ export default function ChartPage() {
     const CardText = ({title, text }:{title: string, text: number}) => (
         <div className="cardText">
             <div className="title">{title}</div>
-            <div className="text">{text.toPrecision(4)}%</div>
+            <div className="text">{text ? text.toPrecision(4) : 0}%</div>
         </div>
     )
 
