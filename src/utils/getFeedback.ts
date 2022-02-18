@@ -47,7 +47,7 @@ const HandlerFeedback = async(key: string) => {
 
 
 export const api = axios.create({
-    baseURL:'http://localhost:8001'
+    baseURL:'https://cardiofeedbacksystem.herokuapp.com'
 })
 
 export const postValue = async(value: string, userId: string) => {

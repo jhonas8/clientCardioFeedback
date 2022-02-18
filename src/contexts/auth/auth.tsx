@@ -65,7 +65,6 @@ export const AuthProvider = ({children}: {children: JSX.Element[] | JSX.Element}
     }
 
     const logout = () => {
-        console.log('Logout')
 
         localStorage.removeItem('user')
         setUser(null)
@@ -76,8 +75,6 @@ export const AuthProvider = ({children}: {children: JSX.Element[] | JSX.Element}
     const register = async(username: string, password: string, segmentation: string, employeeName: string) => {
         const user = { name: username, password, segment: segmentation, employeeName }
         
-        console.log('Registered ', user)
-
         const { data } = await api.post('/ti/register', user)
 
         if(data){

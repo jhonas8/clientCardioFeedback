@@ -15,8 +15,6 @@ export default function RegistrationPage(this: any) {
     const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
         e.preventDefault()
     
-        console.log('Registration')
-
         return register!(
             name,
             password,
