@@ -20,8 +20,13 @@ export default function ChartPage() {
         (async()=>{
             const { data } = await api.get('/admin/charts') as {data: avaragesType}
 
-            setAvarages(data)
-    
+            setAvarages(data ? data : {
+                companyScore:0,
+                suggestedScore: 0,
+                userAndHistory: [],
+                currentAvarages: [{name: 'null', value:0}],
+                previousAvarages: []
+            })
         })()
     })
 
@@ -110,7 +115,7 @@ export default function ChartPage() {
                     </thead>
                     <tbody key='tableHistoryBody'>
                         {
-                            avarages!.userAndHistory.map(
+                            avarages && avarages.userAndHistory.map(
                                 ({history, name}) => (
                                     history.map(
                                         avaliation => <tr>
@@ -134,37 +139,39 @@ export default function ChartPage() {
         }
     }
 
-    return avarages 
-        ?(
-            <main className="chartPageMain">
+
+    return (<main className="chartPageMain">
                 { HomeButton('/admin').render() }
                 { PageTitle().render() }
                 { ScorePointsCard().render() }
                 <h3 className='cardTitle'>Mês atual</h3>
-                <main className="avarageCardMain">
+                <main className="avarageCardMain">                  
                     {
-                        avarages.currentAvarages.map(
+                        avarages && avarages.currentAvarages.map(
                             avarage => Card(avarage.name, avarage.value)
                         )
                     } 
                     <div className="avarageCard">
                         <div className="cardText">
                             <div className="title">Total</div>
-                            <div className="text">{avarages.userAndHistory.reduce(
-                                (acc, value) => acc + value.history.length
-                            ,0)}</div>
+                            <div className="text">{avarages
+                                ? avarages.userAndHistory.reduce(
+                                    (acc, value) => acc + value.history.length,0)
+                                : 0
+                                }
+                            </div>
                         </div>
                     </div>
                     
                 </main>
                 
                 {
-                    avarages.previousAvarages.length && (
+                    avarages && avarages.previousAvarages.length && (
                         <>
                             <h3 className='cardTitle'>Mês Passado</h3>
                             <main className="avarageCardMain">
                                 {
-                                    avarages!.previousAvarages.map(
+                                    avarages && avarages.previousAvarages.map(
                                         avarage => Card(avarage.name, avarage.value)
                                     )
                                 }
@@ -174,8 +181,5 @@ export default function ChartPage() {
                 }
 
                 { Table().render() }
-
-            </main>
-        )
-        : <LoadSpinn/>
+            </main>)
 }
