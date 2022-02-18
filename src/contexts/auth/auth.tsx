@@ -60,7 +60,7 @@ export const AuthProvider = ({children}: {children: JSX.Element[] | JSX.Element}
             navigate(targetLocation)
         }else {
             window.alert('Usuário não encontrado.')
-            window.location.reload()
+            navigate('/login')
         }
     }
 
@@ -79,7 +79,7 @@ export const AuthProvider = ({children}: {children: JSX.Element[] | JSX.Element}
 
         if(data){
             window.alert(data)
-            window.location.reload()
+            navigate('/ti/register')
         }
     }
 
