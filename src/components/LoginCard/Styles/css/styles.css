@@ -28,10 +28,14 @@
   border-radius: 15%;
 }
 .loginForm h3 {
-  color: #585757;
+  color: var(--primary-color);
   font-family: "Rowdies", cursive;
   letter-spacing: 0.12rem;
   font-size: 2rem;
+}
+.loginForm .formLogo {
+  height: 5rem;
+  width: auto;
 }
 
 .field {
@@ -54,8 +58,10 @@
   border-radius: 15%;
   background-color: var(--login-card-color);
   color: #4d4c4c;
+  text-transform: uppercase;
   font-size: 1em;
   font-weight: bold;
+  font-family: "Hind Siliguri", sans-serif;
   transition: all ease-out 0.2s;
 }
 .actions .loginButton:hover {

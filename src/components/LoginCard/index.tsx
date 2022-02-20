@@ -26,6 +26,7 @@ export default function LoginCard(this: any, props: Types.Props) {
 
         const render = () => (
             <form className="loginForm" onSubmit={handleSubmit} key="loginForm">
+                { LoginFormLogo().render() }
                 { LoginFormTitle().render() }
                 { LoginUserInput().render() }
                 { LoginPasswordInput().render() }
@@ -47,6 +48,14 @@ export default function LoginCard(this: any, props: Types.Props) {
         return {
             render,
         }
+    }
+
+    const LoginFormLogo = () => {
+        const render = () => (
+            <img src="/Images/logo-cardio-imagem.png" alt="cardioImagemLogo" className='formLogo'/>
+        )
+
+        return { render }
     }
 
     const LoginUserInput = () => {
